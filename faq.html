@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+<title>FAQ</title>
+<style>
+    header {
+      background-color: #99d5b7;
+      padding: 25px;
+      text-align: center;
+      font-size: 30px;
+      color: rgb(0, 0, 0);
+      font-family: times new roman;
+    }
+</style>
+</head>
+    
+
+
+<body>
+
+    <header>
+        <h1>FAQ</h1>
+    </header>
+    <br>
+    <br>
+    
+    <input type="text" id="eingabe" />
+    <p id="ergebnis"></p>
+    <script>
+        async function kiDinge() {
+            const userText = document.getElementById('eingabe').value;
+            console.log(userText);
+            await fetch(
+                `https://api.openai.com/v1/chat/completions`,
+                {
+                    body: JSON.stringify({
+                        "model": "gpt-3.5-turbo",
+                        "messages": [{"role": "user", "content": userText}],
+                        "temperature": 0,
+                        "max_tokens": 1000
+                    }),
+                    method: "POST",
+                    headers: {
+                        "content-type": "application/json",
+                        Authorization: "Bearer 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",
+                    },
+                }
+            ).then((response) => {
+                if (response.ok) {
+                    response.json().then((json) => {
+                        alert(json)
+                        console.log(JSON.stringify(json))
+                        document.getElementById('ergebnis').innerHTML = json.choices[0].message.content
+                    });
+                }
+            });
+        }
+    </script>
+    <button onclick="kiDinge()">Suchen</button>
+
+</body>
+</html>
