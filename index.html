@@ -10,7 +10,7 @@ header {
   background-color: #99d5b7;
   padding: 25px;
   text-align: center;
-  font-size: 35px;
+  font-size: 30px;
   color: rgb(0, 0, 0);
   font-family: times new roman;
 }
@@ -24,6 +24,37 @@ button {
   display: inline-block;
   font-size: 20px;
 }
+body{
+ background-image: url("https://img.freepik.com/fotos-kostenlos/essen-mit-zutaten_1220-4884.jpg");
+ background-size: cover;
+ color: white;
+ text-align:right;
+ }
+nav {
+  float: left;
+  width: 50%;
+  padding: 20px;
+}
+
+article {
+  float: right;
+  padding: 20px;
+  width: 50%;
+  text-align:left;
+}
+
+section::after {
+  content: "";
+  display: table;
+  clear: both;
+} 
+footer {
+  bottom:0;
+  left:50%;
+  position:fixed;
+  transform:translateX(-50%);
+  text-align:center;
+}
 </style>
 </head>
 
@@ -35,18 +66,21 @@ button {
 </header>
 
 <br>
-
+<section>
+  <nav>
+  <ul>
+  </ul>
+  </nav>
+  
+  <article>
 <h2 style="font-family: times new roman;">Was wir machen</h2>
-<p style="font-family: times new roman;"><img src="https://static-cse.canva.com/blob/861844/Canva-MADZ_3_yS9I-brunch.jpg" alt="Essen" style="width:500px;height:350px;margin-left:15px;">
-  Wir sind das HappyEat-Team und wir wollen dein Kocherlebnis bereichern.</p>
-<p style="font-family: times new roman;">Bearbeite dein Profil</p>
-<p style="font-family: times new roman;">Suche im Kochbuch das Rezept, dass du kochen willst</p>
-<p style="font-family: times new roman;">Finde dein perfektes Kochmatch</p>
-<br>
-<br>
-<br>
-<br>
-<br>
+<p style="font-family: times new roman;">
+  Wir sind das HappyEat-Team. Wir sind Melisa, Rebecca, Sina und Sophie. Wir wollen dein Kocherlebnis bereichern.</p>
+<p style="font-family: times new roman;">Erstelle ein Profil und melde dich an.</p>
+<p style="font-family: times new roman;">Suche im Kochbuch das Rezept, dass du kochen willst.</p>
+<p style="font-family: times new roman;">Finde dein perfektes KochMatch, indem wir dir passende Matches vorschlagen. Koche gemeinsam in einer Gruppe.</p>
+</article>
+</section>
 <br>
 <br>
 <br>
@@ -54,11 +88,16 @@ button {
 <br>
 
 <button onclick="document.location='Profil.html'">Profil</button>
-<button onclick="document.location='Kochbuch.html'">Kochbuch</button>
+<button onclick="document.location='Kochbuch.html'">Mein Kochbuch</button>
 <button onclick="document.location='Matching.html'">Matching</button>
+<button onclick="document.location='faq.html'">FAQ</button>
 
 
 
 
 </body>
+<footer>
+  <p> © HappyEat Alle Rechte vorbehalten.</p>
+<a href= "mailto:HappyEat@example.com">Kontaktiere uns</a> 
+</footer>
 </html>

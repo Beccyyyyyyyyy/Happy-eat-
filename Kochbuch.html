@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="de">
 <head>
-<title>Kochbuch</title>
+<title> Mein Kochbuch</title>
 <style>
 header {
   background-color: #99d5b7;
@@ -11,10 +11,20 @@ header {
   color: rgb(0, 0, 0);
   font-family: times new roman;
 }
+button {
+  background-color: #c7c7c7; /* Green */
+  border: none;
+  color: white;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 18px;
+}
 
 div {
   margin: 10px;
-  border: 1px solid #4CAF50;
+  border: 1px solid #99d5b7;
 }
 
 .abstand {
@@ -50,8 +60,12 @@ div {
 <body>
  
 <header>
-  <h1>Kochbuch</h1>
+  <h1> Mein Kochbuch</h1>
 </header>
+<button onclick="document.location='index.html'">Startseite</button>
+<button onclick="document.location='Profil.html'">Profil</button>
+<button onclick="document.location='Matching.html'">Matching</button>
+<button onclick="document.location='faq.html'">FAQ</button>
 </style>
 </head>
 <body>
@@ -234,7 +248,7 @@ Basilikum waschen und Blätter abzupfen. Pizza aus dem Ofen nehmen und mit Orega
     <td>je ½ rote und gelbe Paprika</td>
   </tr>
   <tr>
-    <td>1 Stiele Basilikum</td>
+    <td>1 Stiel Basilikum</td>
   </tr>
   <tr>
     <td>½ Zweig Rosmarin</td>
@@ -254,5 +268,11 @@ Kräuter waschen und trocken schütteln. Vom Zweig Rosmarin die Nadeln abstreife
 
    
 </body>
+<!--footer-->
+  <p style="text-align:center;"> © HappyEat Alle Rechte vorbehalten.</p>
+<p style="text-align:center;">
+  <a href= "mailto:HappyEat@example.com">Kontaktiere uns</a> 
+</p>
+<!--/footer-->
 </html>
 

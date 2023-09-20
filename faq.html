@@ -11,6 +11,22 @@
       color: rgb(0, 0, 0);
       font-family: times new roman;
     }
+button {
+  background-color: #c7c7c7; /* Green */
+  border: none;
+  color: white;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 18px;
+}
+footer {
+  bottom:0;
+  left:50%;
+  position:fixed;
+  transform:translateX(-50%);
+}
 </style>
 </head>
     
@@ -21,6 +37,10 @@
     <header>
         <h1>FAQ</h1>
     </header>
+<button onclick="document.location='index.html'">Startseite</button>
+<button onclick="document.location='Profil.html'">Profil</button>
+<button onclick="document.location='Kochbuch.html'">Mein Kochbuch</button>
+<button onclick="document.location='Matching.html'">Matching</button>
     <br>
     <br>
     
@@ -59,4 +79,8 @@
     <button onclick="kiDinge()">Suchen</button>
 
 </body>
+<footer>
+    <p> © HappyEat Alle Rechte vorbehalten.</p>
+  <a href= "mailto:HappyEat@example.com">Kontaktiere uns</a> 
+</footer>
 </html>

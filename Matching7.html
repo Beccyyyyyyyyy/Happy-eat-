@@ -22,7 +22,7 @@ button {
   text-align: center;
   text-decoration: none;
   display: inline-block;
-  font-size: 50px;
+  font-size: 20px;
 }
 footer {
   bottom:0;
@@ -32,25 +32,30 @@ footer {
   text-align:center;
 }
 
-
 </style>
 </head>
 <body>
     <header>
-        <h1>Dein Profil wurde hochgeladen :) </h1>
+        <h1>Du bist der Gruppe beigetreten :) </h1>
       </header>
+     
+  <div style="float:left;">    
+      <button onclick="document.location='index.html'">Startseite</button>
+      <button onclick="document.location='Profil.html'">Profil</button>
+      <button onclick="document.location='Kochbuch.html'">Mein Kochbuch</button>
+      <button onclick="document.location='faq.html'">FAQ</button>
+      <button onclick="document.location='Matching.html'">Zurück</button>
+  </div>
       <br>
       <br>
       <br>
       <br>
-      <br>
-      <br>
-    <button onclick="document.location='Matching.html'">Finde dein Match</button>
+<p style="float:left;">
+    <button onclick="document.location='Matching.html'">Noch ein Match suchen</button>
+</p>
   </body>
   <footer>
     <p> © HappyEat Alle Rechte vorbehalten.</p>
   <a href= "mailto:HappyEat@example.com">Kontaktiere uns</a> 
   </footer>
 </html>
-
-    

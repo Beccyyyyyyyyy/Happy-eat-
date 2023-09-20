@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html lang="de">
 <head>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
 <title>Matching</title>
 <style>
 header {
@@ -11,12 +12,10 @@ header {
   text-align: center;
   font-size: 35px;
   color: #FFFAF0;
-  font-family:arial 
+  font-family:times new roman
 }
 
-</style>
-<style>
-table, th, td {font-family:arial; text-align: center
+table, th, td {font-family:arial; text-align: left
  
 }
 img{
@@ -24,9 +23,109 @@ img{
     margin-right: auto;
 
 }
-</style>
-  
+button {
+  background-color: #c7c7c7; /* Green */
+  border: none;
+  color: white;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 20px;
+}
 
+nav {
+  float: left;
+  width: 50%;
+  padding: 20px;
+}
+
+article {
+  float: right;
+  padding: 20px;
+  width: 50%;
+  text-align:left;
+}
+
+
+
+/*
+ * Basic button style
+ */
+.btn {
+  box-shadow: 1px 1px 0 rgba(255,255,255,0.5) inset;
+  border-radius: 3px;
+  border: 1px solid;
+  display: inline-block;
+  height: 18px;
+  line-height: 18px;
+  padding: 0 8px;
+  position: relative;
+
+  font-size: 12px;
+  text-decoration: none;
+  text-shadow: 0 1px 0 rgba(255,255,255,0.5);
+}
+/*
+ * Counter button style
+ */
+.btn-counter { margin-right: 39px; }
+.btn-counter:after,
+.btn-counter:hover:after { text-shadow: none; }
+.btn-counter:after {
+  border-radius: 3px;
+  border: 1px solid #d3d3d3;
+  background-color: #eee;
+  padding: 0 8px;
+  color: #777;
+  content: attr(data-count);
+  left: 100%;
+  margin-left: 8px;
+  margin-right: -13px;
+  position: absolute;
+  top: -1px;
+}
+.btn-counter:before {
+  transform: rotate(45deg);
+  filter: progid:DXImageTransform.Microsoft.Matrix(M11=0.7071067811865476, M12=-0.7071067811865475, M21=0.7071067811865475, M22=0.7071067811865476, sizingMethod='auto expand');
+
+  background-color: #eee;
+  border: 1px solid #d3d3d3;
+  border-right: 0;
+  border-top: 0;
+  content: '';
+  position: absolute;
+  right: -13px;
+  top: 5px;
+  height: 6px;
+  width: 6px;
+  z-index: 1;
+  zoom: 1;
+}
+/*
+ * Custom styles
+ */
+.btn {
+  background-color: #dbdbdb;
+  border-color: #bbb;
+  color: #666;
+}
+.btn:hover,
+.btn.active {
+  text-shadow: 0 1px 0 #b12f27;
+  background-color: #f64136;
+  border-color: #b12f27;
+}
+.btn:active { box-shadow: 0 0 5px 3px rgba(0,0,0,0.2) inset; }
+.btn span { color: #f64136; }
+.btn:hover, .btn:hover span,
+.btn.active, .btn.active span { color: #eeeeee; }
+.btn:active span {
+  color: #b12f27;
+  text-shadow: 0 1px 0 rgba(255,255,255,0.3);
+}
+
+</style>
 </head>
 
 <body>
@@ -34,36 +133,70 @@ img{
 <header>
   <h1 style="background-color: #99d5b7;">HappyEat<br> HappyMeet</h1>
 </header>
+<button onclick="document.location='index.html'">Startseite</button>
+<button onclick="document.location='Profil.html'">Profil</button>
+<button onclick="document.location='Kochbuch.html'">Mein Kochbuch</button>
+<button onclick="document.location='faq.html'">FAQ</button>
+<button onclick="document.location='Matching.html'">Zurück</button>
 <br>
-<p style=  font-family:arial>Finde Dein perfektes KochMatch!</p>
+<p style=  font-family:times new roman>Hier findest du weitere Informationen zu deinem ausgewählten KochMatch. Schau dir die Kochdetails an und entscheide, ob es zu dir passt.<br>Klicke bei Teilnahmewunsch auf den Button unterhalb und trete der Gruppe bei.</p>
 <br>
 
-<table style="width:100%">
+<table style="width:60%">
   <tr>
     <td style="width:20%">
-      <div style="width: 100%">
-        <img src="https://image.essen-und-trinken.de/13043394/t/O1/v3/w960/r1/-/poke-bowl-adobestock-258898621-nblxer.jpg" width="120" height="120" alt="" style="margin:12px" align="left">
-      </div>
-    </td>
-    <td style="width:20%"><img src="https://www.kuechengoetter.de/uploads/media/452x452/08/131658-damwildsteak-mit-mango-rucola-salat-und-nachos-0.jpg?v=1-7" width="120" height="120" alt="" style="margin:12px" align="left"></td>
-    <td style="width:20%"><img src="https://images.lecker.de/falafel-wrap/1x1,id=9ebe6a7c,b=lecker,w=1600,h=,ca=12.42,0,87.58,100,rm=sk.jpeg" width="120" height="120" alt="" style="margin:12px" align="left"></td>
-    <td style="width:20%"><img src="https://image.gala.de/20255004/t/NV/v17/w1440/r1/-/artischocke--9438155-.jpg" width="120" height="120" alt="" style="margin:12px" align="left"></td>
-    <td style="width:20%"><img src="https://leckereideen.com/wp-content/uploads/2023/05/Kartoffelpuffer-Rezept7.jpg" width="120" height="120" alt="" style="margin:12px" align="left"></td>
-  </tr>
-  <tr>
-    <td>Pokw bowl</td>
-    <td>Damwild-Steak mit Mango-Rucola-Salat und Nachos</td>
-    <td>Falafel Wrap</td>
-    <td>Pochierte Artischocken</td>
-    <td>Kartoffelpuffer</td>
-  </tr>
+      <p><b>Falafel Wrap</b></p>
+      <td style="width:20%"><img src="https://images.lecker.de/falafel-wrap/1x1,id=9ebe6a7c,b=lecker,w=1600,h=,ca=12.42,0,87.58,100,rm=sk.jpeg" width="120" height="120" alt="" style="margin:12px" align="center"></td>
+    <td style="width: 20%"> <h2 style="font-family: times new roman;">Kontaktdetails</h2>
+      <p style="font-family: times new roman;">
+        <b>Gruppengröße:</b> 20 Personen</p>
+      <p style="font-family: times new roman; text-align: left;"><b>Altersgruppe:</b> ab 16-40 Jahren</p>
+      <p style="font-family: times new roman;"><b>Budget:</b> 5 Euro</p>
+      <p style="font-family: times new roman;"><b>Region:</b> Esslingen am Neckar</p>
+      <p style="font-family: times new roman;"><b>Kochort:</b> Veggeria 
+      <p style="font-family: times new roman;"><b>Datum:</b> 15. Oktober 2023  </p> </td>
+      <td style="width: 20%"><button onclick="document.location='Matching7.html'">Beitreten</button></td>     
+  
+    </tr>
+
 </table>
 
+<h3>Lass ein Like hier:</h3>
+        <p>
+          <a href="#" title="Love it" class="btn btn-counter" data-count="389"><span>&#x2764;</span></a>
+          
+        </p>
 
-<button onclick="document.location='Matching.html'">Finde dein Match</button>
+<script>$('.btn-counter').on('click', function(event, count) {
+  event.preventDefault();
+  
+  var $this = $(this),
+      count = $this.attr('data-count'),
+      active = $this.hasClass('active'),
+      multiple = $this.hasClass('multiple-count');
+  
+  // First method, allows to add custom function
+  // Use when you want to do an ajax request
+  /* if (multiple) {
+  $this.attr('data-count', ++count);
+  // Your code here
+  } else {
+  $this.attr('data-count', active ? --count : ++count).toggleClass('active');
+  // Your code here
+  } */
+  
+  // Second method, use when ... I dunno when but it looks cool and that's why it is here
+  $.fn.noop = $.noop;
+  $this.attr('data-count', ! active || multiple ? ++count : --count  )[multiple ? 'noop' : 'toggleClass']('active');
+  
+});</script>
+
 </body>
+<!--footer-->
+<p style="text-align:center;"> © HappyEat Alle Rechte vorbehalten.</p>
+<p style="text-align:center;">
+  <a href= "mailto:HappyEat@example.com">Kontaktiere uns</a> 
+</p>
+<!--/footer-->
 </html>
 
-
-</body>
-</html>

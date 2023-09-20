@@ -21,15 +21,22 @@ div {
 }
 
 body {font-family: Arial, Helvetica, sans-serif}
-
+footer {
+  bottom:0;
+  left:50%;
+  position:fixed;
+  transform:translateX(-50%);
+}
 </style>
 </head>
 <body>
     <header>
         <h1>Profil</h1>
-      </header>
+     
+     </header> 
+  <button onclick="document.location='index.html'"style="float:left">Startseite</button>
 
-
+<br>
 <form>
 <br>
     <label for="fname">Vorname:</label><br>
@@ -42,16 +49,35 @@ body {font-family: Arial, Helvetica, sans-serif}
     <input type="text" id="fname" name="fname" 
     value=""><br>
     <br>
-  <label for="fname">Geschlecht:</label><br>
-    <input type="text" id="fname" name="fname" value=""><br>
-    <br>
-    <label for="fname">Lade hier dein Liebblingsrezept hoch:</label><br>
-    <input type="text" id="fname" name="fname" value=""><br>
-   <br>
- </form>
- <button onclick="document.location='Profilbestaetigung.html'">Submit</button>
+</form> 
+<br>
+<form name="Testform">
+	<label for="Geschlecht">Ich identifiziere mich als:</label>
+	<select name="Pizza" id="pizza"
+	size="1">
+		<option value="P101">M</option>
+		<option value="P102">W</option>
+		<option value="P103">D</option>
+		<option value="P104">Keine Angabe</option>
+	</select>
+</form>
+<br>
+<form>
+  <label for="fname">Region</label><br>
+  <input type="text" id="fname" name="fname" value=""><br>
+  <br>
+  
+</form>
+<br>
 
-    
+ <button onclick="document.location='Profilbestaetigung.html'">Profil anlegen</button>
+<br>
+<br>
+  
 
 </body>
+<footer>
+    <p> © HappyEat Alle Rechte vorbehalten.</p>
+  <a href= "mailto:HappyEat@example.com">Kontaktiere uns</a> 
+</footer>
 </html>
