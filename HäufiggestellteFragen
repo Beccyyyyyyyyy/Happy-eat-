@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+<title>FAQ</title>
+<style>
+header {
+  background-color: #99d5b7;
+  padding: 25px;
+  text-align: center;
+  font-size: 30px;
+  color: rgb(0, 0, 0);
+  font-family: times new roman;
+}
+</style>
+</head>
+
+<body>
+ 
+<header>
+  <h1>FAQ</h1>
+</header>
