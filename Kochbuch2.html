@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+<title> Eigenes Rezept </title>
+<style>
+header {
+  background-color: #99d5b7;
+  padding: 25px;
+  text-align: center;
+  font-size: 30px;
+  color: rgb(0, 0, 0);
+  font-family: times new roman;
+}
+button {
+  background-color: #c7c7c7; /* Green */
+  border: none;
+  color: white;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 18px;
+}
+
+div {
+  margin: 10px;
+  border: 1px solid #99d5b7;
+  width: 40%;
+  height: 60px
+}
+
+textarea {
+  resize: none;
+}
+
+.abstand {
+  padding: 10px;
+}
+
+#customers {
+  font-family: Arial, Helvetica, sans-serif;
+  border-collapse: collapse;
+  width: 14%;
+}
+
+#customers td, #customers th {
+  border: 1px solid #ddd;
+  padding: 8px;
+}
+
+#customers tr:nth-child(even){background-color: #f2f2f2;}
+
+#customers tr:hover {background-color: #ddd;}
+
+#customers th {
+  padding-top: 12px;
+  padding-bottom: 12px;
+  text-align: left;
+  background-color:  #99d5b7;
+  color: white;
+}
+
+footer {
+  bottom:0;
+  left:50%;
+  position:fixed;
+  transform:translateX(-50%);
+}
+a:link {
+  color:  #99d5b7;
+  background-color: transparent;
+  text-decoration: none;
+}
+a:visited {
+  color:  #99d5b7;
+  background-color: transparent;
+  text-decoration: none;
+}
+
+
+</style>
+  </head>
+
+  <script type="text/javascript">
+    // <![CDATA[
+    /**
+     * Appends a row to a table
+     *
+     * @param tableId String ID of the table to which the row will be added
+     * @param cells   Array  Cells to add as a new row
+     */
+    function addRow(tableId)
+    {
+        var tb    = document.getElementById(tableId)
+                            .getElementsByTagName('tbody')[0];
+        var newTr = document.createElement('tr');
+    
+        var td = document.createElement('td');
+        var inputFeld = document.createElement('input')
+        td.appendChild(inputFeld);
+        // td.appendChild('<input type="text" id="customers" name="fname" value=' );
+        newTr.appendChild(td);
+    
+        tb.appendChild(newTr);
+    }
+    // ]]>
+
+    function deleterow(tableId){
+      var tb    = document.getElementById(tableId)
+                            .getElementsByTagName('tbody')[0];
+      if (tb.hasChildNodes())
+      {tb.removeChild(tb.lastChild)}
+    }
+
+
+    </script>
+
+
+  <body>
+ 
+    <header>
+      <h1> Eigenes Rezept erstellen </h1>
+    </header>
+<button onclick="document.location='index.html'">Startseite</button>
+<button onclick="document.location='Profil.html'">Profil</button>
+<button onclick="document.location='Matching.html'">Matching</button>
+<button onclick="document.location='faq.html'">FAQ</button>
+<button onclick="document.location='Kochbuch.html'">Mein Kochbuch</button>
+    <p>Du brauchst noch Ideen, dann klick <a href="""https://www.chefkoch.de/">hier!</a></p>
+
+    <form>
+    <br>
+        <label for="fname">Name des Rezeptes:</label><br>
+        <input type="text" id="fname" Rezeptname="fname" value=""><br>
+<br>
+
+        <label for="fname">Bild des Rezeptes:</label><br>
+        
+        <form action="upload.php" method="post"  enctype="multipart/form-data">
+          <input type="file" name="datei"><br>
+          </form>
+
+          <br><br>
+
+
+        <label for="fname">Zutaten:</label><br> 
+       
+
+      
+
+        <table id="customers">
+          <tr>
+       
+          </tr>
+          <tr>
+            <td> <input type="text" id="fname" name="fname" 
+              value=""><br></td>
+          </tr>
+          <tr>
+            <td> <input type="text" id="fname" name="fname" 
+              value=""><br></td>
+          </tr>
+          <tr>
+            <td> <input type="text" id="fname" name="fname" 
+              value=""><br></td>
+          </tr>
+          <tr>
+            <td> <input type="text" id="fname" name="fname" 
+              value=""><br></td>
+          </tr>
+          <tr>
+            <td> <input type="text" id="fname" name="fname" 
+              value=""><br></td>
+          </tr>
+          <tr>
+            <td> <input type="text" id="fname" name="fname" 
+              value=""><br></td>
+            
+        </tr>
+        </table>    
+
+        
+        &nbsp;&nbsp;&nbsp;&nbsp;<button onclick="addRow('customers');">+</button>  <button onclick="deleterow('customers')">-</button>
+
+   
+
+<br><br>
+
+        <label for="fname">Zubereitung:</label><br>
+
+        <div  class="abstand">
+          <textarea type="text" id="fname" name="fname" 
+          style="width: 98%; height: 80%;" value=""></textarea>
+          <br>
+          <br>
+          <br>
+        </div>
+
+    </form> 
+    <br>
+
+       
+      
+    </form>
+    <br>
+    
+     <button onclick="document.location='rezeptbestaetigung.html'">Rezept erstellen</button>
+    <br>
+    <br>
+  </body>
+  <p style="text-align:center;"> © HappyEat Alle Rechte vorbehalten.</p>
+  <p style="text-align:center;">
+    <a href= "mailto:HappyEat@example.com">Kontaktiere uns</a> 
+  </p>
+  </html>

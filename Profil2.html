@@ -144,14 +144,7 @@ footer {
   position:fixed;
   transform:translateX(-50%);
 }
-.button{  background-color: #c7c7c7; /* Green */
-  border: none;
-  color: white;
-  padding: 15px 32px;
-  text-align: center;
-  text-decoration: none;
-  display: inline-block;
-  font-size: 20px;}
+
 a:link {
   color:  #99d5b7;
   background-color: transparent;
@@ -167,7 +160,7 @@ a:visited {
   </head>
   <body>
     <div class="main-block">
-    <form action="/meinprofil.html" onsubmit="return submitHallo(event)">
+    <form action="/meinprofil.html">
       <header> <h1>Erstelle dein Profil</h1> </header>
       <button class="button"onclick="document.location='index.html'">Startseite</button>
       <fieldset>
@@ -176,12 +169,12 @@ a:visited {
         </legend>
         <div  class="personal-details">
           <div>
-            <div><label>Vorname*</label><input type="text" name="vorname" value="" required></div>
-            <div><label>Nachname*</label><input type="text" name="nachname" value="" required></div>
-            <div><label>Region*</label><input type="text" name="region" value="" required></div>
+            <div><label>Vorname*</label><input type="text" name="vorname" required></div>
+            <div><label>Nachname*</label><input type="text" name="nachname" required></div>
+            <div><label>Region*</label><input type="text" name="region" required></div>
             <div>
               <label>Land*</label>  
-              <select name="land" value=""> 
+              <select name="land"> 
                 <option value=""></option>
                 <option value="Deutschland">Deutschland</option>
                 <option value="England">England</option>
@@ -272,28 +265,12 @@ a:visited {
             <input type="checkbox" name="checkbox"><span>Ich akzeptiere die die Datenschutzbestimmungen und AGBs von HappyEat.</a></span>
           </div>
       </fieldset>
-      <button type="submit">Daten prüfen</button>
+      <button type="submit" href="/">Daten prüfen</button>
     </form>
     </div> 
     <footer>
     <p> © HappyEat Alle Rechte vorbehalten.</p>
  <p style="text-align: center;"> <a href= "mailto:HappyEat@example.com">Kontaktiere uns</a> </p>
 </footer>
-  <script>
-    function submitHallo(e) {
-      e.preventDefault();
-  var formData = new FormData(e.target);
-  // output as an object
-  console.log(Object.fromEntries(formData));
-
-  // ...or iterate through the name-value pairs
-  for (var pair of formData.entries()) {
-    console.log(pair[0] + ": " + pair[1]);
-    localStorage.setItem(pair[0], pair[1]);
-  }
-  window.location.replace('/meinprofil')
-      return true;
-    }
-  </script>
   </body>
 </html>

@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<style>
+    header {
+  background-color: #99d5b7;
+  padding: 25px;
+  text-align: center;
+  font-size: 20px;
+  color: rgb(0, 0, 0);
+  font-family: times new roman;
+}
+body {
+  text-align: center;
+}
+div {
+  width: 320px;
+  padding: 10px;
+  border: 5px solid rgb(39, 36, 36);
+  margin: 0;
+}
+button {
+      width: 100%;
+      padding: 10px 0;
+      margin: 10px auto;
+      border-radius: 5px; 
+      border: none;
+      background:  #99d5b7; 
+      font-size: 14px;
+      font-weight: 600;
+      color: rgb(0, 0, 0);
+      }
+
+body {font-family: Arial, Helvetica, sans-serif}
+footer {
+  bottom:0;
+  left:50%;
+  position:fixed;
+  transform:translateX(-50%);
+}
+.button{  background-color: #c7c7c7; /* Green */
+  border: none;
+  color: white;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 20px;}
+a:link {
+  color:  #99d5b7;
+  background-color: transparent;
+  text-decoration: none;
+}
+a:visited {
+  color:  #99d5b7;
+  background-color: transparent;
+  text-decoration: none;
+}
+</style>
+<body>
+    <header>
+        <h1>Mein Profil</h1>
+     
+     </header> 
+     <button class="button"onclick="document.location='index.html'">Startseite</button>
+<br>
+  <label for="vorname"><h3>Vorname</h3></label>
+  <p id="vorname"></p>
+  <label for="nachname"><h3>Nachname</h3></label>
+  <p id="nachname"></p>
+<label for="region"><h3>Region</h3></label>
+  <p id="region"></p>
+  <label for="land"><h3>Land</h3></label>
+  <p id="land"></p>
+  <label for="gender"><h3>Geschlecht</h3></label>
+  <p id="gender"></p>
+  <label for="bdate-block"><h3>Geburtstag</h3></label>
+  <p>
+    <span id="bday-day"></span>
+    <span id="bday-month"></span>
+    <span id="bday-year"></span>
+  </p>
+<br>
+<button onclick="document.location='Profilbestaetigung.html'">Profil anlegen</button>
+<br>
+
+<br>
+  <p><br> © HappyEat Alle Rechte vorbehalten.</p>
+<a href= "mailto:HappyEat@example.com">Kontaktiere uns</a>
+<script>
+  const vars = [
+    'bday-day',
+    'bday-month',
+    'bday-year',
+    'vorname',
+    'nachname',
+    'gender',
+    'land',
+    'region',
+  ]
+  for (let i = 0; i < vars.length; i++) {
+    document.getElementById(vars[i]).innerHTML = localStorage.getItem(vars[i])
+  }
+</script>
+</body>
+</html>

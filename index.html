@@ -8,9 +8,9 @@ img {
 }
 header {
   background-color: #99d5b7;
-  padding: 25px;
+  padding: 20px;
   text-align: center;
-  font-size: 30px;
+  font-size: 25px;
   color: rgb(0, 0, 0);
   font-family: times new roman;
 }
@@ -55,6 +55,16 @@ footer {
   transform:translateX(-50%);
   text-align:center;
 }
+a:link {
+  color:  #99d5b7;
+  background-color: transparent;
+  text-decoration: none;
+}
+a:visited {
+  color:  #99d5b7;
+  background-color: transparent;
+  text-decoration: none;
+}
 </style>
 </head>
 
@@ -62,8 +72,12 @@ footer {
  
 <header>
   <h1>HappyEat</h1>
-  <h2 style="font-size:25px;font-family: garamond;">-HappyMeet-</h2>
+  <p> align=center><marquee width=400><h2 style="font-size:28px;font-family: garamond;">-HappyMeet-</h2></marquee></p>
 </header>
+<button onclick="document.location='Profil.html'">Profil anlegen</button>
+<button onclick="document.location='Kochbuch.html'">Mein Kochbuch</button>
+<button onclick="document.location='Matching.html'">Matching</button>
+<button onclick="document.location='faq.html'">FAQ</button>
 
 <br>
 <section>
@@ -76,9 +90,9 @@ footer {
 <h2 style="font-family: times new roman;">Was wir machen</h2>
 <p style="font-family: times new roman;">
   Wir sind das HappyEat-Team. Wir sind Melisa, Rebecca, Sina und Sophie. Wir wollen dein Kocherlebnis bereichern.</p>
-<p style="font-family: times new roman;">Erstelle ein Profil und melde dich an.</p>
-<p style="font-family: times new roman;">Suche im Kochbuch das Rezept, dass du kochen willst.</p>
-<p style="font-family: times new roman;">Finde dein perfektes KochMatch, indem wir dir passende Matches vorschlagen. Koche gemeinsam in einer Gruppe.</p>
+<p style="font-family: times new roman;">Erstelle ein <a href="Profil.html">Profil</a> und melde dich an.</p>
+<p style="font-family: times new roman;">Suche im <a href="Kochbuch.html">Kochbuch</a> das Rezept, das du kochen willst.</p>
+<p style="font-family: times new roman;">Finde dein perfektes <a href="Matching.html">KochMatch</a>, indem wir dir passende Matches vorschlagen. Koche gemeinsam in einer Gruppe.</p>
 </article>
 </section>
 <br>
@@ -87,10 +101,6 @@ footer {
 <br>
 <br>
 
-<button onclick="document.location='Profil.html'">Profil</button>
-<button onclick="document.location='Kochbuch.html'">Mein Kochbuch</button>
-<button onclick="document.location='Matching.html'">Matching</button>
-<button onclick="document.location='faq.html'">FAQ</button>
 
 
 
